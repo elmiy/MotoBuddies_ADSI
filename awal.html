@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 14px;
+            font-style: normal;
+            background: url(bengkel.jpg);
+            background-size: 375px 812px;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+        .v1{
+            position: relative;
+            width: 375px;
+            height: 812px;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+            overflow: hidden;
+
+            background: rgba(29, 4, 26, 0.5);
+        }
+        .img{
+            position: absolute;
+            width: 135px;
+            height: 135px;
+            left: 120px;
+            top: 110px;
+        }
+        .MB{
+            position: absolute;
+            width: 270px;
+            height: 53px;
+            left: 53px;
+            top: 266px;
+
+            font-family: 'Roboto';
+            font-weight: 900;
+            font-size: 45px;
+            line-height: 53px;
+            
+            color: #C83E4D;
+        }
+        .button{
+            position: absolute;
+            left: 53px;
+            top: 670px;
+            font-size: 17px;
+            font-family: 'Poppins';
+            font-weight: 900;
+            letter-spacing: 5px;
+        }
+        #masuk{
+            background: #FFB9C0;
+            border-radius: 10px;
+            width: 130px;
+            height: 50px;
+            color: #C83E4D;
+            cursor: pointer;
+            border: none;
+        }
+        #masuk:hover{
+            background: #e7aeb4;
+        }
+        #daftar{
+            background: #C83E4D;;
+            border-radius: 10px;
+            width: 130px;
+            height: 50px;
+            color: #FFB9C0;
+            cursor: pointer;
+            border: none;
+        }
+        #daftar:hover{
+            background: #da5865;
+        }
+    </style>
+    <title>MotoBuddies</title>
+    </head>
+    <body>
+        <div class="v1">
+            <img src="m-letter.svg" alt="logo" class="img">
+            <p class="MB">MotoBuddies</p>
+            <div class="button">
+                <button type="button" id="masuk" onclick="window.location.href='login.html'">Masuk</button>
+                <button type="button" id="daftar" onclick="window.location.href='register.html'">Daftar</button>
+            </div>
+        </div>
+    </body>
+</html>
