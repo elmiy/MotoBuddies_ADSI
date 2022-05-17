@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 14px;
+            font-family: 'Poppins';
+            font-style: normal;
+        }
+        .v1{
+            position: relative;
+            width: 375px;
+            height: 812px;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+            overflow: hidden;
+
+            background: #FFF6F6;
+        }
+        .img{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 27px;
+            top: 64px;
+        }
+        .awal{
+            position: absolute;
+            width: 221px;
+            height: 118px;
+            left: 37px;
+            top: 137px;
+
+            font-family: 'Roboto';
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 59px;
+
+            color: #C83E4D;
+        }
+        .cont{
+            position: absolute;
+            width: 225px;
+            height: 29px;
+            left: 37px;
+            top: 260px;
+
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 29px;
+            letter-spacing: 0.05em;
+
+            color: #D35562;
+        }
+        .login{
+            position: absolute;
+            width: 301.56px;
+            height: 299px;
+            left: 37px;
+            top: 357px;
+
+            background: #F4D6CC;
+            border-radius: 20px;
+        }
+        .box-login{
+            display: flex;
+            justify-content:space-between;
+            margin: 14.48px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #C83E4D;
+            color: #595959;
+        }
+        .box-login input {
+            width: 100%;
+            padding: 2px 0;
+            background: none;
+            border: none;
+            outline: none;
+            color: #595959;
+            font-size: 17px;
+            font-weight: Regular;
+            line-height: 26px;
+        }
+        .box-login input::placeholder {
+            color: #595959;
+        }
+        .chk{
+            margin-left: 14.48px;
+            background-color: #F4D6CC;
+            stroke: #C83E4D;
+            cursor: pointer;
+        }
+        .lab{
+            font-weight: 400;
+            font-size: 12.5px;
+            letter-spacing: 0.5px;
+            margin-right: 70px;
+
+            color: #414141;
+        }
+        .a{
+            color: #C83E4D;
+        }
+        .btn-login{
+            margin-left: 14.48px;
+            margin-top: 50px;
+            width: 90%;
+            padding: 10px;
+            color: white;
+            background-color: #C83E4D;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-login:hover{
+            background: #D35562;
+        }
+        .reg{
+            margin-left: 14.48px;
+            margin-top: 5px;
+            font-weight: 400;
+            font-size: 12.5px;
+        }
+    </style>
+    <title>Login Page | MotoBuddies</title>
+  </head>
+  <body>
+    <div class="v1">
+        <img src="arrow-left-circle.svg" alt="back button" class="img" onclick="window.location.href='awal.html'">
+        <p class="awal">Welcome Back</p>
+        <p class="cont">Log in to continue</p>
+        <form action="login.php" method="POST" class="login">
+            <div class="box-login">
+                <input type="email" placeholder="Email" name="email" required>
+            </div>
+            <div class="box-login">                    
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <div>
+                <input type="checkbox" name="ingatSaya" class="chk">
+                <label class="lab">Ingat Saya</label> 
+                <a href="#" style="color: #C83E4D; font-size: 12.5px;">Lupa Password?</a>
+            </div>
+            <input type="submit" name="login" class="btn-login" value="MASUK">
+            <div class="reg">
+                <span>Belum Punya Akun ? <a href="register.html" class="a">Daftar</a></span>
+            </div>
+        </form>
+    </div>
+  </body>
+</html>
