@@ -1,3 +1,30 @@
+<?php
+include "config.php";
+class home {
+    public $nama;
+    public $email;
+    public $kendaraan;
+
+    public function getNama() {
+        $mysqli=new mysqli('localhost', 'root', 'alohomora73', 'motobuddies');
+        $get = $mysqli->query("SELECT * FROM nama_user WHERE email = '$email'"); 
+        while($x= mysqli_fetch_assoc($get)){
+            array_push($this->hasil, $x); 
+        }
+        return $this->hasil;
+    } 
+
+    public function getKendaraan() {
+        $mysqli=new mysqli('localhost', 'root', 'alohomora73', 'motobuddies');
+        $get = $mysqli->query("SELECT * FROM kendaraan WHERE email = '$email'"); 
+        while($x= mysqli_fetch_assoc($get)){
+            array_push($this->hasil, $x); 
+        }
+        return $this->hasil;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +46,9 @@
           </div>
           <div class="col-8">
             <div class="card-body" style="padding-top: 64px;">
-            <div class="card-title" style="font-size: 24px;">Hi, <strong>Langit!</strong></div>
+            <div class="card-title" style="font-size: 24px;">Hi, <strong><?php $nama ?></strong></div>
             <div class="card-text" style="font-size: 16px;">Mobil anda</div>
-            <div class="card-text"> INOVA N 2503 SK</div>
+            <div class="card-text"> <?php $kendaraan ?></div>
             </div>
           </div>
           <button class="card shadow-sm" style="border-radius: 15px; width: 343px; height: 55px;">
@@ -31,7 +58,7 @@
           </button>
         </div>
       </section>
-      <section class="container">
+      <section class="opsi">
         <div class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
           <div class="card-body shadow-sm">
           <h5 class="card-title" style="font-size: 24px;">Booking Service</h5>
@@ -63,7 +90,7 @@
       <section class="bottombar fixed-bottom">
         <div class="justify-content-center row pt-2">
           <div class="col-2 d-flex justify-content-center">
-            <a href="menu_utama.html"><i class="bi bi-house-door-fill" style="color: #F4D6CC; font-size: 25px"></i></a>
+            <a href="home.html"><i class="bi bi-house-door-fill" style="color: #F4D6CC; font-size: 25px"></i></a>
           </div>
           <div class="col-2 d-flex justify-content-center">
             <a href="#"><i class="bi bi-journal-text" style="color: #F4D6CC; font-size: 25px"></i></a>
@@ -114,6 +141,9 @@ body{
   width: 390px;
   height: 207.51px;
   border-radius: 0px 0px 30px 30px;
+}
+.opsi{
+  margin-top: 52px;
 }
 .bottombar{
   position: static;
