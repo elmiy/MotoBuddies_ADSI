@@ -1,5 +1,5 @@
 <?php
-    $mysqli = mysqli_connect('localhost', 'root', '', 'adsi') or die("Failed");
+    $dbConnection  = mysqli_connect('localhost', 'root', '', 'adsi') or die("Failed");
     
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -13,7 +13,8 @@
         header("location:register.html");
     }
     else{
-        mysqli_query($mysqli, "INSERT INTO user ('email', 'no_hp', 'password') VALUES ('$email','$no_hp','$password')");
+        $sqlquery = "INSERT INTO user (email, no_hp, password) VALUES ('$email','$no_hp','$password')";
+        mysqli_query($dbConnection , $sqlquery);
         session_start();
         $_SESSION["email"] = $email;
         header("location:register2.html");
