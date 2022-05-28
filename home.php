@@ -15,7 +15,7 @@ class home {
     } 
 
     public function getKendaraan() {
-        $mysqli=new mysqli('localhost', 'root', 'alohomora73', 'motobuddies');
+        $mysqli=new mysqli('localhost', 'root', '', 'motobuddies');
         $get = $mysqli->query("SELECT * FROM kendaraan WHERE email = '$email'"); 
         while($x= mysqli_fetch_assoc($get)){
             array_push($this->hasil, $x); 
@@ -25,7 +25,6 @@ class home {
 }
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,9 +45,9 @@ class home {
           </div>
           <div class="col-8">
             <div class="card-body" style="padding-top: 64px;">
-            <div class="card-title" style="font-size: 24px;">Hi, <strong><?php $nama ?></strong></div>
+            <div class="card-title" style="font-size: 24px;">Hi, <strong>Langit!</strong></div>
             <div class="card-text" style="font-size: 16px;">Mobil anda</div>
-            <div class="card-text"> <?php $kendaraan ?></div>
+            <div class="card-text"> INOVA N 2503 SK</div>
             </div>
           </div>
           <button class="card shadow-sm" style="border-radius: 15px; width: 343px; height: 55px;">
@@ -59,50 +58,58 @@ class home {
         </div>
       </section>
       <section class="opsi">
-        <div class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
+        <form action="booking.html">
+        <button class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
           <div class="card-body shadow-sm">
           <h5 class="card-title" style="font-size: 24px;">Booking Service</h5>
           <p class="card-text fst-italic" style="font-size: 10px;">Hindari menunggu lama, datang langsung layani. Lakukan pemesanan terkait waktu servis Anda.</p>
           </div>
-        </div>
+        </button>
+        </form>
     
-        <div class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
+        <form action="FAQ.html">
+        <button class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
           <div class="card-body shadow-sm">
           <h5 class="card-title" style="font-size: 24px;">FAQ</h5>
           <p class="card-text fst-italic" style="font-size: 10px;">Frequently Asked Questions.</p>
           </div>
-        </div>
+        </button>
+        </form>
     
-        <div class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
+        <form action="rekom.html">
+        <button class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
           <div class="card-body shadow-sm">
           <h5 class="card-title" style="font-size: 24px;">Tips and Trick</h5>
           <p class="card-text fst-italic" style="font-size: 10px;">Temukan cara-cara menarik untuk merawat kendaraan Anda.</p>
           </div>
-        </div>
+        </button>
+        </form>
     
-        <div class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
+        <form action="rekom.html">
+        <button class="card mb-4 mx-auto" style="border-radius: 10px; width: 304px; height: 100px;">
           <div class="card-body shadow-sm">
           <h5 class="card-title" style="font-size: 24px;">Recommendation</h5>
           <p class="card-text fst-italic" style="font-size: 10px;">Rekomendasi terkait jadwal servis terbaik menurut riwayat transaksi Anda.</p>
           </div>
-        </div>
+        </button>
+        </form>
       </section>
       <section class="bottombar fixed-bottom">
         <div class="justify-content-center row pt-2">
           <div class="col-2 d-flex justify-content-center">
-            <a href="home.html"><i class="bi bi-house-door-fill" style="color: #F4D6CC; font-size: 25px"></i></a>
+            <a href="home.php"><i class="bi bi-house-door-fill" style="color: #C83E4D; font-size: 25px"></i></a>
           </div>
           <div class="col-2 d-flex justify-content-center">
-            <a href="#"><i class="bi bi-journal-text" style="color: #F4D6CC; font-size: 25px"></i></a>
+            <a href="pemesanan.html"><i class="bi bi-journal-text" style="color: #F4D6CC; font-size: 25px"></i></a>
           </div>
           <div class="col-2 d-flex justify-content-center">
-            <a href="chat.html"><img src="logo.png" style="height: 25px; width: 25px; margin-top: 5px;"></a>
+            <a href="chat.html"><img src="logox.png" style="height: 25px; width: 25px; margin-top: 5px;"></a>
           </div>
           <div class="col-2 d-flex justify-content-center">
-            <a href="#"><i class="bi bi-bell-fill" style="color: #F4D6CC; font-size: 25px"></i></a>
+            <a href="notif.php"><i class="bi bi-bell-fill" style="color: #F4D6CC; font-size: 25px"></i></a>
           </div>
           <div class="col-2 d-flex justify-content-center">
-            <a href="#"><i class="bi bi-person-circle" style="color: #F4D6CC; font-size: 25px"></i></a>
+            <a href="profile.html"><i class="bi bi-person-circle" style="color: #F4D6CC; font-size: 25px"></i></a>
           </div>
         </div>
       </section>
